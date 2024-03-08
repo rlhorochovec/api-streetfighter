@@ -8,7 +8,7 @@ Projeto de API utilizando Node.JS e Postgres.
 
 #### Insere um lutador
 
-```http
+```
  POST /api/lutadores
 ```
 
@@ -69,4 +69,4 @@ Projeto de API utilizando Node.JS e Postgres.
 
 ## Screenshots
 
-<img src="https://github.com/rlhorochovec/api-streetfighter/blob/develop/screenshots/get.png" width="400" />
+<img src="https://github.com/rlhorochovec/api-streetfighter/blob/develop/screenshots/get.PNG" width="400" />
