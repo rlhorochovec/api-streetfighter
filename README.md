@@ -9,7 +9,7 @@ Projeto de API utilizando Node.JS e Postgres.
 #### Insere um lutador
 
 ```
- POST /api/lutadores
+    POST /api/lutadores
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -19,14 +19,14 @@ Projeto de API utilizando Node.JS e Postgres.
 
 #### Retorna todos os lutadores
 
-```http
-  GET /api/lutadores
+```
+    GET /api/lutadores
 ```
 
 #### Retorna um lutador
 
-```http
- GET /api/lutadores/${id}
+```
+    GET /api/lutadores/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -35,8 +35,8 @@ Projeto de API utilizando Node.JS e Postgres.
 
 #### Retorna lutadores filtrados por nome
 
-```http
- GET /api/lutadores?nome=${nome}
+```
+    GET /api/lutadores?nome=${nome}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -46,8 +46,8 @@ Projeto de API utilizando Node.JS e Postgres.
 
 #### Altera um lutador
 
-```http
- PUT /api/lutadores/${id}
+```
+    PUT /api/lutadores/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -58,8 +58,8 @@ Projeto de API utilizando Node.JS e Postgres.
 
 #### Remove um lutador
 
-```http
- DEL /api/lutadores/${id}
+```
+    DEL /api/lutadores/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
