@@ -3,6 +3,19 @@
 
 Projeto de API utilizando Node.JS e Postgres.
 
+## Rodando localmente
+
+```bash
+  cd api-streetfighter
+  npm install
+  node server.js
+```
+
+## Acessando
+
+```
+http://localhost:8080/api/lutadores
+```
 
 ## Documentação da API
 
