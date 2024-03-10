@@ -14,7 +14,7 @@ Projeto de API utilizando Node.JS e Postgres.
 ## Acessando
 
 ```
-http://localhost:8080/api/lutadores
+http://localhost:8080/lutadores
 ```
 
 ## Documentação da API
@@ -22,7 +22,7 @@ http://localhost:8080/api/lutadores
 #### Insere um lutador
 
 ```
-  POST /api/lutadores
+  POST /lutadores
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -33,13 +33,13 @@ http://localhost:8080/api/lutadores
 #### Retorna todos os lutadores
 
 ```
-  GET /api/lutadores
+  GET /lutadores
 ```
 
 #### Retorna um lutador
 
 ```
-  GET /api/lutadores/${id}
+  GET /lutadores/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -49,7 +49,7 @@ http://localhost:8080/api/lutadores
 #### Retorna lutadores filtrados por nome
 
 ```
-  GET /api/lutadores?nome=${nome}
+  GET /lutadores?nome=${nome}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -60,7 +60,7 @@ http://localhost:8080/api/lutadores
 #### Altera um lutador
 
 ```
-  PUT /api/lutadores/${id}
+  PUT /lutadores/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -72,7 +72,7 @@ http://localhost:8080/api/lutadores
 #### Remove um lutador
 
 ```
-  DEL /api/lutadores/${id}
+  DEL /lutadores/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
