@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
     res.json({ message: "Rafael Horochovec(api-streetfighter)." });
 });
 
-require("./routes/lutador.routes")(app);
+require("./routes/fighter.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

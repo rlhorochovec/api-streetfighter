@@ -14,7 +14,7 @@ Projeto de API utilizando Node.JS e Postgres.
 ## Acessando
 
 ```
-http://localhost:8080/lutadores
+http://localhost:8080/api/fighters
 ```
 
 ## Documentação da API
@@ -22,24 +22,24 @@ http://localhost:8080/lutadores
 #### Insere um lutador
 
 ```
-  POST /lutadores
+  POST /api/fighters
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `nome`      | `string` | **Obrigatório**. O nome do lutador que você quer |
-| `nacionalidade` | `string` | **Obrigatório**. A nacionalidade do lutador que você quer |
+| `name`      | `string` | **Obrigatório**. O nome do lutador que você quer |
+| `country` | `string` | **Obrigatório**. A nacionalidade do lutador que você quer |
 
 #### Retorna todos os lutadores
 
 ```
-  GET /lutadores
+  GET /api/fighters
 ```
 
 #### Retorna um lutador
 
 ```
-  GET /lutadores/${id}
+  GET /api/fighters/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -49,30 +49,30 @@ http://localhost:8080/lutadores
 #### Retorna lutadores filtrados por nome
 
 ```
-  GET /lutadores?nome=${nome}
+  GET /api/fighters?name=${name}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `nome`      | `string` | **Obrigatório**. O ID do lutador que você quer |
+| `name`      | `string` | **Obrigatório**. O ID do lutador que você quer |
 
 
 #### Altera um lutador
 
 ```
-  PUT /lutadores/${id}
+  PUT /api/fighters/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `integer` | **Obrigatório**. O ID do lutador que você quer |
-| `nome`      | `string` | **Obrigatório**. O nome do lutador que você quer |
-| `nacionalidade` | `string` | **Obrigatório**. A nacionalidade do lutador que você quer |
+| `name`      | `string` | **Obrigatório**. O nome do lutador que você quer |
+| `country` | `string` | **Obrigatório**. A nacionalidade do lutador que você quer |
 
 #### Remove um lutador
 
 ```
-  DEL /lutadores/${id}
+  DEL /api/fighters/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
