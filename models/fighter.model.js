@@ -1,11 +1,11 @@
 module.exports = (sequelize, Sequelize) => {
-    const Lutador = sequelize.define("lutadores", {
-        nome: {
+    const Fighter = sequelize.define("fighters", {
+        name: {
             type: Sequelize.STRING
         },
-        nacionalidade: {
+        country: {
             type: Sequelize.STRING
         },
     });
-    return Lutador;
+    return Fighter;
 };

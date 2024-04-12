@@ -1,11 +1,11 @@
 const db = require("../models");
-const Lutador = db.lutadores;
+const Fighter = db.fighters;
 const Op = db.Sequelize.Op;
 
 // Create and Save
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.nome) {
+    if (!req.body.name) {
         res.status(400).send({
             message: "O conteúdo não pode estar vazio!"
         });
@@ -13,13 +13,13 @@ exports.create = (req, res) => {
     }
 
     // Create
-    const lutador = {
-        nome: req.body.nome,
-        nacionalidade: req.body.nacionalidade,
+    const fighter = {
+        name: req.body.name,
+        country: req.body.country,
     };
 
     // Save
-    Lutador.create(lutador)
+    Fighter.create(fighter)
         .then(data => {
             res.send(data);
         })
@@ -33,10 +33,10 @@ exports.create = (req, res) => {
 
 // Retrieve all from the database
 exports.findAll = (req, res) => {
-    const nome = req.query.nome;
-    var condition = nome ? { nome: { [Op.iLike]: `%${nome}%` } } : null;
+    const name = req.query.name;
+    var condition = name ? { name: { [Op.iLike]: `%${name}%` } } : null;
 
-    Lutador.findAll({ where: condition })
+    Fighter.findAll({ where: condition })
         .then(data => {
             res.send(data);
         })
@@ -52,7 +52,7 @@ exports.findAll = (req, res) => {
 exports.findOne = (req, res) => {
     const id = req.params.id;
 
-    Lutador.findByPk(id)
+    Fighter.findByPk(id)
         .then(data => {
             res.send(data);
         })
@@ -67,7 +67,7 @@ exports.findOne = (req, res) => {
 exports.update = (req, res) => {
     const id = req.params.id;
 
-    Lutador.update(req.body, {
+    Fighter.update(req.body, {
         where: { id: id }
     })
         .then(num => {
@@ -92,7 +92,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
     const id = req.params.id;
 
-    Lutador.destroy({
+    Fighter.destroy({
         where: { id: id }
     })
         .then(num => {
@@ -115,7 +115,7 @@ exports.delete = (req, res) => {
 
 // Delete all from the database.
 exports.deleteAll = (req, res) => {
-    Lutador.destroy({
+    Fighter.destroy({
         where: {},
         truncate: false
     })
