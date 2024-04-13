@@ -6,6 +6,9 @@ module.exports = (sequelize, Sequelize) => {
         country: {
             type: Sequelize.STRING
         },
+        thumbnailUrl: {
+            type: Sequelize.STRING
+        },
     });
     return Fighter;
 };

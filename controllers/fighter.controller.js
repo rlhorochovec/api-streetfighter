@@ -16,6 +16,7 @@ exports.create = (req, res) => {
     const fighter = {
         name: req.body.name,
         country: req.body.country,
+        thumbnailUrl: req.body.thumbnailUrl
     };
 
     // Save
