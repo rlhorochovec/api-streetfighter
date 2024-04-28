@@ -7,7 +7,7 @@ exports.create = (req, res) => {
     // Validate request
     if (!req.body.name) {
         res.status(400).send({
-            message: "O conteúdo não pode estar vazio!"
+            message: "Body cannot be empty!"
         });
         return;
     }
@@ -27,7 +27,7 @@ exports.create = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Ocorreu um erro ao salvar o lutador."
+                    err.message || "An error occurred while saving the record."
             });
         });
 };
@@ -44,7 +44,7 @@ exports.findAll = (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Ocorreu um erro ao recuperar os lutadores."
+                    err.message || "An error occurred while retrieving records."
             });
         });
 };
@@ -59,7 +59,7 @@ exports.findOne = (req, res) => {
         })
         .catch(err => {
             res.status(500).send({
-                message: `Erro ao recuperar o lutador com o id = ${id}`
+                message: `Error retrieving record with id = ${id}`
             });
         });
 };
@@ -74,17 +74,17 @@ exports.update = (req, res) => {
         .then(num => {
             if (num == 1) {
                 res.send({
-                    message: "Lutador atualizado com sucesso."
+                    message: "Registration updated successfully."
                 });
             } else {
                 res.send({
-                    message: `Não é possível atualizar o lutador com id = ${id}. Talvez o lutador não tenha sido encontrado ou req.body esteja vazio!`
+                    message: `Cannot update record with id = ${id}. Maybe the record was not found or req.body is empty!`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: `Erro ao atualizar o lutador com o id = ${id}`
+                message: `Error updating record with id = ${id}`
             });
         });
 };
@@ -99,17 +99,17 @@ exports.delete = (req, res) => {
         .then(num => {
             if (num == 1) {
                 res.send({
-                    message: "Lutador removido com sucesso."
+                    message: "Registration successfully removed."
                 });
             } else {
                 res.send({
-                    message: `Não é possível remover o lutador com id = ${id}. Talvez o lutador não tenha sido encontrado!`
+                    message: `Cannot remove record with id = ${id}. Perhaps the record was not found!`
                 });
             }
         })
         .catch(err => {
             res.status(500).send({
-                message: `Erro ao remover o lutador com o id = ${id}`
+                message: `Error removing record with id = ${id}`
             });
         });
 };
@@ -121,12 +121,12 @@ exports.deleteAll = (req, res) => {
         truncate: false
     })
         .then(nums => {
-            res.send({ message: `${nums} lutadores foram removidos com sucesso.` });
+            res.send({ message: `${nums} records were successfully removed.` });
         })
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Ocorreu um erro ao remover todos os lutadores."
+                    err.message || "An error occurred while removing all records."
             });
         });
 };
