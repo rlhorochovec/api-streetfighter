@@ -25,10 +25,10 @@ http://localhost:8080/api/fighters
   POST /api/fighters
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `name`      | `string` | **Obrigatório**. O nome do lutador que você quer |
-| `country` | `string` | **Obrigatório**. A nacionalidade do lutador que você quer |
+| Parâmetro      | Tipo     | Descrição                                                 |
+| :------------- | :------- | :-------------------------------------------------------- |
+| `name`         | `string` | **Obrigatório**. O nome do lutador que você quer          |
+| `country`      | `string` | **Obrigatório**. A nacionalidade do lutador que você quer |
 | `thumbnailUrl` | `string` | **Obrigatório**. A URL da imagem do lutador que você quer |
 
 #### Retorna todos os lutadores
@@ -43,9 +43,9 @@ http://localhost:8080/api/fighters
   GET /api/fighters/${id}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `integer` | **Obrigatório**. O ID do lutador que você quer |
+| Parâmetro | Tipo       | Descrição                                      |
+| :-------- | :--------- | :--------------------------------------------- |
+| `id`      | `integer`  | **Obrigatório**. O ID do lutador que você quer |
 
 #### Retorna lutadores filtrados por nome
 
@@ -53,8 +53,8 @@ http://localhost:8080/api/fighters
   GET /api/fighters?name=${name}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
+| Parâmetro   | Tipo     | Descrição                                      |
+| :---------- | :--------| :--------------------------------------------- |
 | `name`      | `string` | **Obrigatório**. O ID do lutador que você quer |
 
 
@@ -64,12 +64,13 @@ http://localhost:8080/api/fighters
   PUT /api/fighters/${id}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `integer` | **Obrigatório**. O ID do lutador que você quer |
-| `name`      | `string` | **Obrigatório**. O nome do lutador que você quer |
-| `country` | `string` | **Obrigatório**. A nacionalidade do lutador que você quer |
-| `thumbnailUrl` | `string` | **Obrigatório**. A URL da imagem do lutador que você quer |
+| Parâmetro      | Tipo      | Descrição                                                 |
+| :------------- | :-------- | :-------------------------------------------------------- |
+| `id`           | `integer` | **Obrigatório**. O ID do lutador que você quer            |
+| `name`         | `string`  | **Obrigatório**. O nome do lutador que você quer          |
+| `country`      | `string`  | **Obrigatório**. A nacionalidade do lutador que você quer |
+| `thumbnailUrl` | `string`  | **Obrigatório**. A URL da imagem do lutador que você quer |
+
 
 #### Remove um lutador
 
@@ -77,9 +78,9 @@ http://localhost:8080/api/fighters
   DEL /api/fighters/${id}
 ```
 
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `integer` | **Obrigatório**. O ID do lutador que você quer |
+| Parâmetro | Tipo       | Descrição                                      |
+| :-------- | :--------- | :--------------------------------------------- |
+| `id`      | `integer`  | **Obrigatório**. O ID do lutador que você quer |
 
 
 ## Screenshots
